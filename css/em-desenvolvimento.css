@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #191919;
+    color: #f4f4f4;
+}
+
+.container {
+    opacity: 0;
+    animation: fade-in 1s ease-in forwards;
+}
+
+@keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo img {
+    max-width: 50%;
+    height: auto;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.text {
+    font-size: 3vw;
+    text-transform: uppercase;
+    opacity: 0.5;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.text-animation {
+    animation: blink 2s infinite;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.5;
+    }
+}
+
+/* FOOTER */
+
+.footer-container {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--color-primary);
+    position: fixed;
+    bottom: 0;
+}
+
+.footer-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-icons img {
+    max-height: 25px;
+    align-items: center;
+    margin: 8px;
+}
+
+.footer-icons a:hover {
+    color: var(--color-secondary);
+    text-decoration: none;
+}
+
+@media screen and (max-width: 600px) {
+    .text {
+        font-size: 7vw;
+    }
+
+    .logo img {
+        max-width: 70%;
+    }
+
+    .footer-icons img {
+        width: 8vw;
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+    .text {
+        font-size: 3vw;
+    }
+
+    .logo img {
+        max-width: 50%;
+    }
+
+    .footer-icons img {
+        width: 4vw;
+    }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+    .text {
+        font-size: 2vw;
+    }
+
+    .logo img {
+        max-width: 40%;
+    }
+
+    .footer-icons img {
+        width: 3vw;
+    }
+}
